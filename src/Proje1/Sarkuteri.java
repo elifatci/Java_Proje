@@ -85,12 +85,12 @@ public class Sarkuteri {
                     case 26:
                         urunAdi = "Yumurta";
                         urunFiyati = 85;
-                        System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
+                        System.out.println(urunMiktari + "koli " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
                         break;
                     case 27:
                         urunAdi = "Sut";
                         urunFiyati = 80;
-                        System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
+                        System.out.println(urunMiktari + "lt " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
                         break;
                     case 28:
                         urunAdi = "Yogurt";

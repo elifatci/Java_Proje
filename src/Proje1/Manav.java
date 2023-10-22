@@ -46,7 +46,7 @@ public class Manav {
                 "\nUrun kodu:13 Sogan Fiyatı:15₺ \nUrun kodu:14 Biber Fiyatı:50₺" +
                 "\nUrun kodu:15 Pirasa Fiyati:35₺ \nUrun kodu:16 Havuc Fiyati:25₺" +
                 "\nUrun kodu:17 Elma Fiyatı: 30₺\nUrun kodu:18 Erik Fiyatı:100₺ " +
-                "\nUrun kodu:19 Kivi Fiyati:150₺ \nUrun Fiyati:20 Uzum Fiyati:60₺");
+                "\nUrun kodu:19 Kivi Fiyati:150₺ \nUrun kodu:20 Uzum Fiyati:60₺");
 
         while (urun) {
             urunKodu = scanner.nextInt();
