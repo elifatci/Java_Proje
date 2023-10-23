@@ -1,5 +1,7 @@
 package Proje1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Manav {
@@ -16,11 +18,12 @@ public class Manav {
     static int urunMiktari;
     static String urunAdi;
     static double urunFiyati;
-    static double toplamFiyat = 0;
     static double toplam;
+    static int sayac=0;
 
 
     static Scanner scanner = new Scanner(System.in);
+    static List<String> sepet = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -58,96 +61,77 @@ public class Manav {
                         urunAdi = "Domates";
                         urunFiyati = 25;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 12:
                         urunAdi = "Salatalik";
                         urunFiyati = 40;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 13:
                         urunAdi = "Sogan";
                         urunFiyati = 15;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 14:
                         urunAdi = "Biber";
                         urunFiyati = 50;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 15:
                         urunAdi = "Pirasa";
                         urunFiyati = 35;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 16:
                         urunAdi = "Havuc";
                         urunFiyati = 25;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 17:
                         urunAdi = "Elma";
                         urunFiyati = 30;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 18:
                         urunAdi = "Erik";
                         urunFiyati = 100;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 19:
                         urunAdi = "Kivi";
                         urunFiyati = 150;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     case 20:
                         urunAdi = "Uzum";
                         urunFiyati = 60;
                         System.out.println(urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati * urunMiktari + " Tl'dir");
-                        toplamFiyat += urunFiyati * urunMiktari;
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
                         break;
                     default:
-                        System.out.println("Tekrar manav reyonunda islem yapmak istiyor musunuz? Evet:E/Hayir:H");
+
                 }
 
-                char devam = scanner.next().toLowerCase().charAt(0);
-                if (devam == 'e') {
-                    manav();
-                } else if (devam == 'h') {
-                    urun = false;
-                    toplam = toplamFiyat;
-                    System.out.println("Aldiginiz urunlerin toplam fiyati: " + toplam + "₺ dir.Giris ekranina yonlendiriliyorsunuz");
-                    giris();
-                } else {
-                    System.out.println("Lutfen Evet:E/Hayir:H olarak giris yapin");
+                urunFiyati = urunMiktari * urunFiyati;
+                toplam += urunFiyati;
+                sepet.add((sepet.size() + 1) + ". urun: " + urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati + " Tl'dir");
+                System.out.println("Aldiginiz urunlerin fiyati: " + toplam);
+                System.out.println("Baska bir urun almak isterseniz lutfen kodunu giriniz. \nCikis yapmak icin 0'a basiniz");
+                sayac++;
+                for (int i = 0; i < sayac; i++) {
+                    System.out.println("Manav Reyonu sepetiniz: " + sepet.get(i));
                 }
-
+            } else if (urunKodu == 0) {
+                cikis();
 
             } else {
-                System.out.println("İstediginiz urun magazamizda yoktur. Giris ekranina donduruleceksiniz");
-                giris();
+                System.out.println("Yanlis giris yaptiniz! Lutfen tekrar deneyiniz");
             }
 
         }
-
-
+    }
+    public static void cikis() {
+        System.out.println("Bizi tercih ettiginiz icin tesekkur ederiz!");
+        System.out.println("----------------Cikis Yapiliyor----------------");
+        System.exit(0);
     }
 }

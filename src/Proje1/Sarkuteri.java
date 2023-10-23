@@ -1,5 +1,7 @@
 package Proje1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import static Proje1.Manav.manav;
@@ -20,10 +22,11 @@ public class Sarkuteri {
     static String urunAdi;
     static double urunFiyati;
     static double toplamFiyat = 0;
+    static int sayac=0;
     static double toplam;
-    static String sepet;
 
     static Scanner scanner = new Scanner(System.in);
+    static List<String> sepet = new ArrayList<>();
 
     public static void main(String[] args) {
         giris();
@@ -111,8 +114,13 @@ public class Sarkuteri {
                 }
                 urunFiyati = urunMiktari * urunFiyati;
                 toplam += urunFiyati;
-                System.out.println("Olusan sepet tutari: " + toplam);
+                sepet.add((sepet.size() + 1) + ". urun: " + urunMiktari + "kg " + urunAdi + " fiyatı: " + urunFiyati + " Tl'dir");
+                System.out.println("Aldiginiz urunlerin fiyati: " + toplam);
                 System.out.println("Baska bir urun almak isterseniz lutfen kodunu giriniz. \nCikis yapmak icin 0'a basiniz");
+                sayac++;
+                for (int i = 0; i < sayac; i++) {
+                    System.out.println("Sarkuteri Reyonu sepetiniz: " + sepet.get(i));
+                }
             } else if (urunKodu == 0) {
                 cikis();
 
